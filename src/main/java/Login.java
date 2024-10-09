@@ -9,16 +9,19 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
+import org.apache.jasper.tagplugins.jstl.core.If;
+
 /**
  * Servlet implementation class Login
  */
 public class Login extends HttpServlet {
 	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String uname=request.getParameter("uname");
 		String pass = request.getParameter("pass");
 		
-		if(uname.equals("venu") && pass.equals("reddy"))
+		LoginDao dao = new LoginDao();
+		if(dao.check(uname, pass))
 		{
 			HttpSession session= request.getSession();
 			session.setAttribute("username", uname);

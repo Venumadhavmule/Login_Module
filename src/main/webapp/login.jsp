@@ -7,7 +7,7 @@
 <title>Login page</title>
 </head>
 <body>
-	<form action="Login">
+	<form action="Login" method="post">
 		Enter username: <input type="text" name="uname" required><br>
 		Enter Password: <input type="password" name="pass" required><br> 
 		<input
