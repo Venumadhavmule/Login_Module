@@ -12,7 +12,7 @@
 		response.sendRedirect("login.jsp");
 	}
 	%>
-	Welcome ${usernam}
+	Welcome ${usernam} 👋👋
 	<a href="videos.jsp">Videos here</a>
 	
 	<form action="Logout">
