@@ -7,11 +7,14 @@
 <title>Login page</title>
 </head>
 <body>
-	<form action="Login" method="post">
-		Enter username: <input type="text" name="uname" required><br>
-		Enter Password: <input type="password" name="pass" required><br> 
-		<input
-			type="submit" value="Login">
-	</form>
+	<center>
+	<h2>Provide your Credentials🙈🙈</h2>
+		<form action="Login" method="post">
+			Enter username: <input type="text" name="uname" required><br><br>
+			Enter Password: <input type="password" name="pass" required><br><br>
+			<input type="submit" value="Login">
+		</form>
+		<br>don't have an account? <a href="Register.jsp">Register Here.!</a>
+	</center>
 </body>
 </html>

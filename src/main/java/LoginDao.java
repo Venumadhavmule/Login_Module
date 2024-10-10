@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import com.mysql.cj.protocol.Resultset;
 
 public class LoginDao {
-	String sql="select * from userdb.login where uname=? and pass=?";
+	String sqlc="select uname,password from userdb.member where uname=? and password=?";
 	String url = "jdbc:mysql://localhost:3306/userdb";
 	String usrname = "root";
 	String pswd = "Reddy";
@@ -15,7 +15,7 @@ public boolean check(String uname, String pass) {
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn = DriverManager.getConnection(url,usrname,pswd);
-		PreparedStatement st = conn.prepareStatement(sql);
+		PreparedStatement st = conn.prepareStatement(sqlc);
 		st.setString(1, uname);
 		st.setString(2,pass);
 		

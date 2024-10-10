@@ -11,7 +11,7 @@
 	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); //HTTP 1.1
 	response.setHeader("Pragma", "no-cache"); //HTTP 1.0
 	response.setHeader("Expires", "0"); //Proxies
-	
+
 	if (session.getAttribute("username") == null) {
 		response.sendRedirect("login.jsp");
 	}
@@ -24,5 +24,9 @@
 		frameborder="0"
 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 		referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+	<form action="Logout">
+		<input type="submit" value="Logout">
+	</form>
 </body>
 </html>
