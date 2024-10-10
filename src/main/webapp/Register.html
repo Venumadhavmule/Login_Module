@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="regStyle.css">
+    <meta charset="UTF-8">
+    <title>Registration</title>
 </head>
+
 <body>
-	<center>
-	<h1>Enter Your Details for Registration</h1>
-		<form action="Register" method="post">
-		First name: <input type="text" name="fname" required placeholder="Enter your first name"><br><br>
-		Last name: <input type="text" name="lname" required placeholder="Enter your last name"><br><br>
-		Phone no: <input type="tel" name="phn" required placeholder="Enter your Phone number" ><br><br>
-		Email:   <input type="email" name="email" required placeholder="Enter your email"><br><br>
-		Username: <input type="text" name="uname" required placeholder="Enter username"><br><br>
-		Password: <input type="password" name="pswd" required placeholder="Enter your password"><br><br>
-		<input type="submit" value="Register"><br><br>
-		</form>
-		Already have an account? <a href="login.jsp">Login</a>
-	</center>
+    <div class="regDiv">
+        <h1>Enter Your Details for Registration</h1>
+        <form action="Register" method="post">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required placeholder="Enter your first name"><br>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required placeholder="Enter your last name"><br>
+
+            <label for="phn">Phone Number:</label>
+            <input type="tel" id="phn" name="phn" required placeholder="Enter your phone number"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email"><br>
+
+            <label for="uname">Username:</label>
+            <input type="text" id="uname" name="uname" required placeholder="Enter username"><br>
+
+            <label for="pswd">Password:</label>
+            <input type="password" id="pswd" name="pswd" required placeholder="Enter your password"><br>
+
+            <input type="submit" value="Register">
+        </form>
+        <p>Already have an account? <a href="login.jsp">Login</a></p>
+    </div>
 </body>
 </html>
