@@ -2,12 +2,26 @@
 
 This repository contains a simple **Login and Registration** module developed using **JSP**, **Servlets**, **HTML**, **CSS**, **MySQL**, and **Java**. It allows users to register, log in, and maintain session management for authentication purposes.
 
+## Screenshots
+
+| **Login Page**         | **Registration Page**   |
+|------------------------|-------------------------|
+| ![Login Screenshot](src/main/Screenshots/login.png)   | ![Registration Screenshot](src/main/Screenshots/registration.png) |
+
+<!-- | **Welcome Page**       | **About Us Page**       |
+|------------------------|-------------------------|
+| ![Welcome Screenshot](path/to/welcome_screenshot.png) | ![About Us Screenshot](path/to/aboutus_screenshot.png) | -->
+
+> You can add actual screenshot images from your project in the paths provided above to showcase different parts of your application.
+
+---
+
 ## Features
 
 - **User Registration**: New users can register by providing their details.
 - **User Login**: Registered users can log in using their credentials.
 - **Session Management**: After login, user sessions are managed to ensure secure authentication.
-- **Logout**: Users can securely log out and their session will be invalidated.
+- **Logout**: Users can securely log out, and their session will be invalidated.
 - **Password Hashing**: User passwords are stored securely using hashing techniques.
 
 ## Tech Stack
@@ -45,7 +59,7 @@ CREATE DATABASE login_db;
 
 USE login_db;
 
-CREATE TABLE users (
+CREATE TABLE members (
     id INT NOT NULL AUTO_INCREMENT,
     firstname VARCHAR(50),
     lastname VARCHAR(50),
@@ -58,7 +72,7 @@ CREATE TABLE users (
 
 ### 3. Configure Database Connection
 
-Update the database connection details in the file: `src/db/DBConnection.java`
+Update the database connection details in the file: `src/com/db/DBConnection.java`
 
 ```java
 private static final String URL = "jdbc:mysql://localhost:3306/login_db";
@@ -77,9 +91,9 @@ http://localhost:8080/login-module/
 
 ### 5. Register and Login
 
-- Go to the registration page to create a new account.
-- After successful registration, log in using your credentials.
-- Once logged in, the system will maintain a session, and you will be redirected to the dashboard.
+- Go to the registration page (`Register.html`) to create a new account.
+- After successful registration, log in using your credentials via the `login.jsp` page.
+- Once logged in, the system will maintain a session, and you will be redirected to the `welcome.jsp` page.
 
 ## Project Structure
 
@@ -89,31 +103,33 @@ login-module/
 ├── src/
 │   ├── com/
 │   │   ├── controller/
-│   │   │   ├── LoginServlet.java
-│   │   │   ├── LogoutServlet.java
-│   │   │   ├── RegisterServlet.java
+│   │   │   ├── Login.java
+│   │   │   ├── Logout.java
+│   │   │   ├── Register.java
 │   │   │
 │   │   ├── dao/
-│   │   │   └── UserDao.java
+│   │   │   ├── LoginDao.java
+│   │   │   └── RegistDao.java
 │   │   │
 │   │   ├── model/
-│   │   │   └── User.java
+│   │   │   └── Member.java
 │   │   │
 │   │   └── db/
 │   │       └── DBConnection.java
 │   │
-├── web/
-│   ├── index.jsp
+├── webapp/
+│   ├── META-INF/
+│   ├── WEB-INF/
+│   │   └── web.xml
+│   ├── Register.html
+│   ├── Register.jsp
 │   ├── login.jsp
-│   ├── register.jsp
-│   ├── dashboard.jsp
-│   └── logout.jsp
+│   ├── welcome.jsp
+│   ├── aboutus.jsp
+│   ├── videos.jsp
+│   └── css/
+│       ├── logStyle.css
+│       └── regStyle.css
 │
 └── README.md
 ```
-
-## Screenshots
-
-| **Login Page**         | **Registration Page**   |
-|------------------------|-------------------------|
-| ![Login Screensh](src/main/Screenshots/login.png)   | ![Registration Screenshot](src/main/Screenshots/registration.png) |
