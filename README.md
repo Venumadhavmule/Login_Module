@@ -12,10 +12,6 @@ This repository contains a simple **Login and Registration** module developed us
 |------------------------|-------------------------|
 | ![Welcome Screenshot](path/to/welcome_screenshot.png) | ![About Us Screenshot](path/to/aboutus_screenshot.png) | -->
 
-> You can add actual screenshot images from your project in the paths provided above to showcase different parts of your application.
-
----
-
 ## Features
 
 - **User Registration**: New users can register by providing their details.
@@ -46,7 +42,7 @@ Follow these instructions to set up and run the project on your local machine.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/login-module.git
+git clone https://github.com/Venumadhavmule/Login_Module.git
 cd login-module
 ```
 
