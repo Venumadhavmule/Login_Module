@@ -116,4 +116,4 @@ login-module/
 
 | **Login Page**         | **Registration Page**   |
 |------------------------|-------------------------|
-| ![Login Screensh]()   | ![Registration Screenshot]() |
+| ![Login Screensh](src/main/Screenshots/login.png)   | ![Registration Screenshot](src/main/Screenshots/registration.png) |
